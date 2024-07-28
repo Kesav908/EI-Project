@@ -8,6 +8,7 @@ public class VirtualClassroomManager {
     private List<Classroom> classrooms;
     private List<Student> students;
     private boolean adminLoggedIn;
+    private boolean exit=false;
     private Student loggedInStudent;
     private final String ADMIN_USERNAME = "admin"; // Change this to a secure username
     private final String ADMIN_PASSWORD = "admin123"; // Change this to a secure password
@@ -28,7 +29,7 @@ public class VirtualClassroomManager {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Virtual Classroom Manager");
 
-        while (true) {
+        while (!exit) {
             System.out.println("\nMenu:");
             System.out.println("1. Admin Login");
             System.out.println("2. Student Login");
